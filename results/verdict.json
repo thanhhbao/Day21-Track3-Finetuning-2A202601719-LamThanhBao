@@ -1,0 +1,37 @@
+{
+  "comparison": [
+    {
+      "run": "(a) base + naive prompt",
+      "target": 0.0,
+      "regression": 0.7578,
+      "format": 0.0,
+      "latency_ms": 3282.6,
+      "n": 50
+    },
+    {
+      "run": "(b) base + optimized prompt",
+      "target": 0.765,
+      "regression": 0.7578,
+      "format": 1.0,
+      "latency_ms": 1022.0,
+      "n": 50
+    },
+    {
+      "run": "(c) LoRA fine-tune",
+      "target": 0.955,
+      "regression": 0.7556,
+      "format": 1.0,
+      "latency_ms": 1491.9,
+      "n": 50
+    }
+  ],
+  "verdict": {
+    "passed": true,
+    "reasons": [
+      "beat the optimized-prompt baseline by +0.190 with -0.002 general-capability change."
+    ],
+    "target_delta": 0.18999999999999995,
+    "regression_delta": -0.0022222222222221255
+  },
+  "valid_trace_rate": 0.0
+}
